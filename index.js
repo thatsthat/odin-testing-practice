@@ -53,4 +53,13 @@ module.exports = {
     }
     return outString;
   },
+  analyzeArray: (inpArr) => {
+    const arrProps = {
+      average: inpArr.reduce((a, b) => a + b) / inpArr.length,
+      min: Math.min(...inpArr),
+      max: Math.max(...inpArr),
+      length: inpArr.length,
+    };
+    return arrProps;
+  },
 };

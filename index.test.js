@@ -1,4 +1,4 @@
-const { caesarCipher } = require("./index.js");
+const { caesarCipher, analyzeArray } = require("./index.js");
 const tF = require("./index.js");
 
 test("adds 1 + 2 to equal 3", () => {
@@ -29,6 +29,17 @@ test("multiply two numbers", () => {
   expect(tF.calculator.multiply(5, 6)).toEqual(30);
 });
 
-test("multiply two numbers", () => {
-  expect(caesarCipher("Iep iepz! . 99q", 1)).toMatch(/^Jfq jfqa! . 99r$/);
+test("apply caesar cypher", () => {
+  expect(tF.caesarCipher("Iep iepz! . 99q", 1)).toMatch(/^Jfq jfqa! . 99r$/);
+});
+
+test("provide stats on an array of numbers", () => {
+  expect(
+    tF.analyzeArray([1, 8, 3, 4, 2, 6]).objectContaining({
+      average: 4,
+      min: 1,
+      max: 8,
+      length: 6,
+    })
+  );
 });

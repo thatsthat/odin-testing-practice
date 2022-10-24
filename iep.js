@@ -1,25 +1,9 @@
-inpString = "Iep iepz! . 99q";
-let outString = "";
+inpArr = [1, 8, 3, 4, 2, 6];
 
-const small = "abcdefghijklmnopqrstuvwxyz";
-const large = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-const alphLength = small.length;
-const cyphShift = 1;
-
-for (let i in inpString) {
-  // First handle non-capitals
-  if (inpString[i].match(/[a-z]/)) {
-    const ind = small.indexOf(inpString[i]);
-    outString += small[(ind + cyphShift) % alphLength];
-    // Capital letters handling
-  } else if (inpString[i].match(/[A-Z]/)) {
-    const ind = large.indexOf(inpString[i]);
-    outString += large[(ind + cyphShift) % alphLength];
-  }
-  // What remains are non-letter symbols
-  else {
-    outString += inpString[i];
-  }
-}
-
-console.log(outString);
+const arrProps = {
+  average: inpArr.reduce((a, b) => a + b) / inpArr.length,
+  min: Math.min(...inpArr),
+  max: Math.max(...inpArr),
+  length: inpArr.length,
+};
+console.log(arrProps);
