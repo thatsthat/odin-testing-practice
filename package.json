@@ -1,5 +1,24 @@
 {
   "devDependencies": {
-    "@babel/preset-env": "^7.19.4"
-  }
+    "@babel/preset-env": "^7.19.4",
+    "jest": "^29.2.1"
+  },
+  "name": "odin-testing-practice",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thatsthat/odin-testing-practice.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thatsthat/odin-testing-practice/issues"
+  },
+  "homepage": "https://github.com/thatsthat/odin-testing-practice#readme",
+  "description": ""
 }
